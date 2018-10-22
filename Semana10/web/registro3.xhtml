@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <div class="card card-view" style="width: 400px; float: center;">
+            <div class="card-header bg-info text-center text-uppercase">
+                <h1>USO DE JSF</h1>
+            </div>
+            <div class="card-body">
+                <h:form>
+                    <h:messages errorStyle="color:#159" showDetail="true"/>
+                    <div class="form-group">
+                        <h:outputLabel value="Numero 1"/>
+                        <h:inputText size="8" value="#{ejemplo02.n1}" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <h:outputLabel value="Numero 2"/>
+                        <h:inputText size="8" value="#{ejemplo02.n2}" class="form-control"/>
+                    </div>
+                    <h:selectOneMenu value="#{ejemplo02.operacion}" class="form-control">
+                        <f:selectItem itemValue="SUMA" itemLabel="Suma"/>
+                        <f:selectItem itemValue="PRODUCTO" itemLabel="Producto"/>
+                    </h:selectOneMenu>
+                    
+                    <h:commandButton value="Calcular" action="#{ejemplo02.procesar}" class="mt-5 btn btn-success btn-block"/>
+                </h:form>
+            </div>
+        </div>
+    </h:body>
+</html>
+

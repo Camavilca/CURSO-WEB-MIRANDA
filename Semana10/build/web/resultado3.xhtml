@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <div class="card card-view" style="width: 400px;">
+            <div class="card-header bg-info text-center text-uppercase">
+                <h:outputText value="#{ejemplo02.operacion}" class="text-center text-uppercase title"/>
+            </div>
+            <div class="card-body">
+                <h:form>
+                    <h:messages errorStyle="color:red" />
+                    <h:panelGrid columns="2">
+                        <h:outputLabel value="Numero 1"/>
+                        <h:outputLabel value="#{ejemplo02.n1}"/>
+                        <h:outputLabel value="Numero 2"/>
+                        <h:outputLabel value="#{ejemplo02.n2}"/>
+                        <h:outputLabel value="Resultado"/>
+                        <h:outputLabel value="${ejemplo02.res}"/>
+                    </h:panelGrid>
+                    <h:link value="Atras" outcome="registro3"/>
+                </h:form>             
+            </div>
+        </div>
+    </h:body>
+</html>
+
+
